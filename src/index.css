@@ -19,7 +19,7 @@ code {
 }
 
 .dark-mode {
-	background-color: black;
+	background-color: rgb(37, 37, 37);
 }
 
 .dark-mode h1 {
@@ -33,7 +33,6 @@ code {
 	padding-right: 15px;
 	padding-left: 15px;
 	min-height: 100vh;
-	margin-top: 20px;
 }
 
 .notes-list {
