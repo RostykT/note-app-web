@@ -1,4 +1,4 @@
-import NodeList from "./components/NodeList";
+import NoteList from "./components/NoteList";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
@@ -25,9 +25,20 @@ function App() {
 			date: "13/12/19",
 		},
 	]);
+
+	const addNote = (text) => {
+		const date = new Date();
+		const newNote = {
+			id: nanoid(),
+			text: text,
+			date: date.toLocaleDateString(),
+		};
+		const newNotes = [...notes, newNote];
+		setNotes(newNotes);
+	};
 	return (
 		<div className="container">
-			<NodeList notes={notes} />
+			<NoteList notes={notes} addNote={addNote} />
 		</div>
 	);
 }
